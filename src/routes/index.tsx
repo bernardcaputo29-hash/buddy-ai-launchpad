@@ -43,18 +43,6 @@ function Landing() {
   );
 }
 
-function AmbientGlow() {
-  return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-0">
-      <div className="absolute -top-40 left-1/2 h-[520px] w-[820px] -translate-x-1/2 rounded-full opacity-50 blur-[140px]"
-        style={{ background: "radial-gradient(circle, #7b70d855 0%, transparent 70%)" }} />
-      <div className="absolute top-1/3 -left-40 h-[420px] w-[420px] rounded-full opacity-40 blur-[120px]"
-        style={{ background: "radial-gradient(circle, #4eccc444 0%, transparent 70%)" }} />
-      <div className="absolute top-2/3 -right-32 h-[460px] w-[460px] rounded-full opacity-40 blur-[130px]"
-        style={{ background: "radial-gradient(circle, #ffb35c33 0%, transparent 70%)" }} />
-    </div>
-  );
-}
 
 function Hud() {
   return (
