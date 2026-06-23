@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CursorRing } from "@/components/CursorRing";
-import { AuroraBackground } from "@/components/AuroraBackground";
+import { CosmicBackground } from "@/components/CosmicBackground";
+import { CometCursor } from "@/components/CometCursor";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export const Route = createFileRoute("/")({
@@ -28,7 +29,8 @@ function Landing() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
       <CursorRing />
-      <AuroraBackground />
+      <CometCursor />
+      <CosmicBackground />
       <div className="grain-overlay" aria-hidden />
       <Hud />
       <main>
@@ -64,7 +66,7 @@ function Hud() {
         </ul>
         <a
           href="#waitlist"
-          className="btn-scale rounded-full bg-primary px-4 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-primary-foreground"
+          className="btn-scale cosmic-glow rounded-full bg-primary px-4 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.16em] text-primary-foreground"
         >
           Get access
         </a>
@@ -96,7 +98,7 @@ function Hero() {
         <div className="reveal mt-10 flex flex-wrap items-center gap-4">
           <a
             href="#waitlist"
-            className="btn-scale inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 font-sans text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.82_0.13_70/0.6)]"
+            className="btn-scale inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 font-sans text-sm font-semibold text-primary-foreground cosmic-glow"
           >
             Join the waitlist
             <span aria-hidden>→</span>
@@ -357,7 +359,7 @@ function Waitlist() {
           />
           <button
             type="submit"
-            className="btn-scale rounded-full bg-primary px-7 py-4 font-sans text-sm font-semibold text-primary-foreground shadow-[0_10px_40px_-10px_oklch(0.82_0.13_70/0.6)]"
+            className="btn-scale rounded-full bg-primary px-7 py-4 font-sans text-sm font-semibold text-primary-foreground cosmic-glow"
           >
             {sent ? "You're on the list ✓" : "Get early access"}
           </button>
