@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CursorRing } from "@/components/CursorRing";
+import { AuroraBackground } from "@/components/AuroraBackground";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export const Route = createFileRoute("/")({
@@ -27,8 +28,8 @@ function Landing() {
   return (
     <div className="relative min-h-screen overflow-x-hidden bg-background text-foreground">
       <CursorRing />
+      <AuroraBackground />
       <div className="grain-overlay" aria-hidden />
-      <AmbientGlow />
       <Hud />
       <main>
         <Hero />
